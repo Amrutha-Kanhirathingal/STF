@@ -107,8 +107,6 @@ limitations under the License.
 		<available file="${vs10_vcvarsall_filename}" property="vs10_available"/>
 		<property name="vs22_pro_vcvarsall_filename" location="c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\Build\\vcvarsall.bat"/>
 	   	<available file="${vs22_pro_vcvarsall_filename}" property="vs22_pro_available"/>
-	    	<property name="vs22_bt_vcvarsall_filename" location="c:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\Build\\vcvarsall.bat"/>
-	    	<available file="${vs22_bt_vcvarsall_filename}" property="vs22_bt_available"/>
 		<condition property="vcvarsall_filename" value="${vs14_vcvarsall_filename}">
 			<isset property="vs14_available"/>
 		</condition>
@@ -117,9 +115,6 @@ limitations under the License.
 		</condition>
 		<condition property="vcvarsall_filename" value="${vs22_pro_vcvarsall_filename}">
 			<isset property="vs22_pro_available"/>
-	    	</condition>
-	    	<condition property="vcvarsall_filename" value="${vs22_bt_vcvarsall_filename}">
-			<isset property="vs22_bt_available"/>
 	    	</condition>
 		<condition property="windows_native_compiler_present" value="true">
 			<isset property="vcvarsall_filename"/>
